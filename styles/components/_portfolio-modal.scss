@@ -1,0 +1,30 @@
+/*
+ * Portfolio Modal
+ */
+
+.mi-portfolio-modal {
+  .mi-bglines {
+    left: unset;
+    width: 100%;
+    height: unset;
+    min-height: unset;
+
+    span {
+      min-height: 20px;
+      height: 100%;
+    }
+  }
+
+  .modal-content {
+    background: $color-bg-body;
+    border: 2px solid $color-body;
+  }
+
+  .modal-body {
+    padding: 25px;
+
+    ul {
+      margin-left: 20px;
+    }
+  }
+}
