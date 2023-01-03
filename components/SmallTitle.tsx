@@ -8,9 +8,7 @@ interface ISmallTiTle {
 function SmallTitle({ Icon, title }: ISmallTiTle) {
   return (
     <div className="mi-small-title">
-      <span className="mi-small-title-icon">
-        <Icon htmlColor="#fff" />
-      </span>
+      <Icon className="mi-small-title-icon" />
       <h4>{title}</h4>
     </div>
   );

@@ -30,6 +30,7 @@
 html {
   overflow: hidden;
   overflow-y: auto;
+  background: $color-bg-body;
 }
 
 body {
@@ -41,7 +42,7 @@ body {
   font-family: $ff-body;
   color: $color-body;
   font-weight: 400;
-  background: $color-bg-body;
+  background: unset;
 
   @media #{$layout-tablet} {
     font-size: $fz-body - 2;

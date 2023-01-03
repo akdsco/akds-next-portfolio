@@ -2,7 +2,6 @@
  * Title 
  */
 
-
 .mi-section-title {
   margin-bottom: 60px;
   position: relative;
@@ -96,9 +95,12 @@
 
   h4 {
     font-weight: 700;
+    margin-bottom: unset;
+    line-height: 1;
   }
 
   &-icon {
+    margin-bottom: 4px;
     vertical-align: middle;
     margin-right: 10px;
     font-size: 1.71rem;
@@ -106,8 +108,8 @@
     color: $color-body;
   }
 
-  @media #{$layout-mobile-lg}{
-    &-icon{
+  @media #{$layout-mobile-lg} {
+    &-icon {
       font-size: 1.51rem;
       line-height: 2.13rem;
     }
