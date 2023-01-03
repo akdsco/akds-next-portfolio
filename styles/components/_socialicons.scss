@@ -17,7 +17,7 @@
       color: $color-body;
       font-size: 1.5rem;
 
-      &:hover{
+      &:hover {
         color: $color-theme;
 
         svg path {
@@ -27,13 +27,16 @@
 
       svg {
         fill: $color-body;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 6px;
       }
     }
   }
 
-  &-bordered{
-    li{
-      a{
+  &-bordered {
+    li {
+      a {
         height: 45px;
         width: 45px;
         line-height: 1;
@@ -43,21 +46,21 @@
         line-height: 45px;
         font-size: 1.3rem;
 
-        svg{
+        svg {
           max-height: 100%;
         }
 
-        &:hover{
+        &:hover {
           border-color: $color-theme;
         }
       }
     }
   }
 
-  @media #{$layout-tablet}{
-    &-bordered{
-      li{
-        a{
+  @media #{$layout-tablet} {
+    &-bordered {
+      li {
+        a {
           height: 42px;
           width: 42px;
           line-height: 42px;
@@ -67,16 +70,16 @@
     }
   }
 
-  @media #{$layout-mobile-lg}{
-    li{
-      a{
+  @media #{$layout-mobile-lg} {
+    li {
+      a {
         font-size: 1.25rem;
       }
     }
-    
-    &-bordered{
-      li{
-        a{
+
+    &-bordered {
+      li {
+        a {
           height: 38px;
           width: 38px;
           line-height: 38px;

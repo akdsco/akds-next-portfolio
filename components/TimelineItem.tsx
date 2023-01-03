@@ -1,6 +1,10 @@
 import React from "react";
-import { Experience } from "../pages/resume";
 
+interface Experience {
+  id: number;
+  year: string;
+  details: string;
+}
 interface TimelineItemProps extends Experience {
   position?: string;
   graduation?: string;
