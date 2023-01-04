@@ -42,8 +42,7 @@ export default function Home() {
               <div className="col-lg-10 col-12">
                 <div className="mi-home-content">
                   <h1>
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    Hi, I'm{" "}
+                    Hi, I{"'"}m{" "}
                     <span className="color-theme">{information.name}</span>
                   </h1>
                   <div className="row justify-content-center">

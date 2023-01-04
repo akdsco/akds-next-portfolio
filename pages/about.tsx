@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { Layout, SectionTitle, Testimonial } from "../components";
+import { Layout, SectionTitle } from "../components";
 import database from "../data/database";
 import aboutImage from "../public/img/about-image.jpg";
 // import Slider from "react-slick";
@@ -20,7 +20,7 @@ export interface Review {
 // }
 
 export default function About() {
-  const { information, services, reviews } = database;
+  const { information } = database;
   const {
     address = "",
     age,
@@ -61,18 +61,17 @@ export default function About() {
                   programming.
                 </p>
                 <p>
-                  During last year I{"&apos"}ve worked hard with a small bunch
-                  of motivated individuals to make online meetings less
-                  exhausting (think less zoom fatigue) and there{"&apos"}s
-                  already a small crowd of accountants ready to swear by our
-                  product!
+                  During last year I{"'"}ve worked hard with a small bunch of
+                  motivated individuals to make online meetings less exhausting
+                  (think less zoom fatigue) and there{"'"}s already a small
+                  crowd of accountants ready to swear by our product!
                 </p>
                 <p>
                   A bit of adrenaline junkie after work, riding mountain bikes,
                   snowboards or train for triathlons, because why not? (probably
-                  drinks too much coffee while at it all). If you{"&apos"}ve
-                  gone that far in reading this bio I{"&apos"}d love to get to
-                  know you. You are special!
+                  drinks too much coffee while at it all). If you{"'"}ve gone
+                  that far in reading this bio I{"'"}d love to get to know you.
+                  You are special!
                 </p>
 
                 <ul>

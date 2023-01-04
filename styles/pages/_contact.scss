@@ -7,7 +7,7 @@
     margin-top: -30px;
   }
 
-  &-infoblock {
+  &-info-block {
     margin-top: 30px;
     background: rgba(lighten($color-bg-body, 5), 1);
     padding: 30px;
@@ -63,7 +63,7 @@
   }
 
   @media #{$layout-mobile-sm} {
-    &-infoblock {
+    &-info-block {
       padding: 20px;
       flex-wrap: wrap;
 

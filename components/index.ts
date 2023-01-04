@@ -7,3 +7,7 @@ export { SmallTitle } from "./SmallTitle";
 export { ThemeSwitch } from "./ThemeSwitch";
 export { SocialIcons } from "./SocialIcons";
 export { Testimonial } from "./Testimonial";
+export { Portfolio } from "./Portfolio";
+export { PortfolioModal } from "./PortfolioModal";
+export { PortfoliosView } from "./PortfoliosView";
+export { Pagination } from "./Pagination";
