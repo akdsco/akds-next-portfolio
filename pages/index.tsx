@@ -9,6 +9,7 @@ import database from "../data/database";
 import { useTheme } from "next-themes";
 import { particlesConfig } from "../data/particlesConfig";
 
+// TODO implement google font through next.js?
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {

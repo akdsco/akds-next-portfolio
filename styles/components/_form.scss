@@ -2,12 +2,12 @@
  * Form Styles
  */
 
-.mi-form{
-  &-field{
+.mi-form {
+  &-field {
     margin-top: 30px;
     position: relative;
 
-    label{
+    label {
       position: absolute;
       left: 15px;
       top: -13px;
@@ -18,7 +18,8 @@
       font-size: 0.94rem;
     }
 
-    input, textarea{
+    input,
+    textarea {
       border: 1px solid $color-border;
       font-size: 1rem;
     }

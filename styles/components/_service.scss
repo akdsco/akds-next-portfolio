@@ -22,7 +22,7 @@
     padding-bottom: 15px;
     margin-bottom: 15px;
 
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       left: 0;
@@ -38,15 +38,15 @@
     margin-bottom: 0;
   }
 
-  &:hover{
+  &:hover {
     border-top-color: $color-theme;
   }
 
-  @media #{$layout-laptop}{
+  @media #{$layout-laptop} {
     padding: 20px;
   }
 
-  @media #{$layout-mobile-sm}{
+  @media #{$layout-mobile-sm} {
     padding: 20px;
   }
 }
