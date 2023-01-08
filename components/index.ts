@@ -11,3 +11,4 @@ export { Portfolio } from "./Portfolio";
 export { PortfolioModal } from "./PortfolioModal";
 export { PortfoliosView } from "./PortfoliosView";
 export { Pagination } from "./Pagination";
+export { Loader } from "./Loader";

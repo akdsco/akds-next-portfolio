@@ -3,7 +3,7 @@ import Head from "next/head";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import PinDropIcon from "@mui/icons-material/PinDrop";
-import { SectionTitle, Layout } from "../components";
+import { SectionTitle, Layout, Loader } from "../components";
 import database from "../data/database";
 
 // TODO add form functionality
@@ -21,8 +21,6 @@ const INIT_FORM_STATE = {
   subject: "",
   message: "",
 };
-const SEND_EMAIL_FIREBASE =
-  "https://us-central1-akds-portfolio.cloudfunctions.net/sendEmail";
 
 const isValidEmail = (string: string) => {
   const regexp = /^\w+([.+-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,15})+$/;
@@ -35,15 +33,22 @@ export default function Contact() {
   const [formData, setFormData] = useState<ContactForm>(INIT_FORM_STATE);
   const [error, setError] = useState<boolean>(false);
   const [message, setMessage] = useState<undefined | string>("");
-  const [formState, setFormState] = useState<"ready" | "sent">("ready");
+  const [formState, setFormState] = useState<
+    "ready" | "loading" | "sent" | "fail"
+  >("ready");
 
   const loadError = (msg: string) => {
     setError(true);
     setMessage(msg);
+    setFormState("ready");
   };
 
-  const submitHandler = (event: React.SyntheticEvent) => {
+  const submitHandler = async (event: React.SyntheticEvent) => {
     event.preventDefault();
+    setFormState("loading");
+    setError(false);
+    setMessage("");
+
     if (formState === "sent") {
       setMessage("");
       setFormData(INIT_FORM_STATE);
@@ -74,7 +79,7 @@ export default function Contact() {
     }
 
     // If no errors, send message
-    sendMessage(formData);
+    await sendMessage(formData);
   };
 
   const handleChange = (
@@ -86,23 +91,20 @@ export default function Contact() {
     });
   };
 
-  const sendMessage = (formData: ContactForm) => {
-    fetch(SEND_EMAIL_FIREBASE, {
+  const sendMessage = async (formData: ContactForm) => {
+    const response = await fetch("/api/sendEmail", {
       method: "POST",
-      body: JSON.stringify({
-        ...formData,
-      }),
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        if (JSON.parse(response.body).messageSent) {
-          setError(false);
-          setMessage("Thank you! Your message has been sent successfully.");
-          setFormState("sent");
-        } else {
-          console.log("Sorry message not sent", JSON.parse(response.body));
-        }
-      });
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setFormState("sent");
+      setMessage("Message sent successfully!");
+    } else {
+      setError(true);
+      setMessage("Something went wrong, please try again later..");
+      setFormState("fail");
+    }
   };
 
   const handleAlerts = () => {
@@ -181,9 +183,21 @@ export default function Contact() {
                     />
                   </div>
                   <div className="mi-form-field">
-                    <button className="mi-button" type="submit">
-                      {formState === "ready" ? "Send mail" : "Reset"}
+                    <button
+                      className="mi-button"
+                      style={{ marginRight: 10 }}
+                      type="submit"
+                      disabled={formState === "loading"}
+                    >
+                      {formState === "ready"
+                        ? "Send mail"
+                        : formState === "loading"
+                        ? "Processing.."
+                        : formState === "fail"
+                        ? "Try again"
+                        : "Send more"}
                     </button>
+                    {formState === "loading" && <Loader />}
                   </div>
                 </form>
                 {handleAlerts()}

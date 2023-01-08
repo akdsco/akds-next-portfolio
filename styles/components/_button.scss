@@ -40,6 +40,11 @@
     transform: scaleX(1);
   }
 
+  &:disabled {
+    background: $color-body;
+    cursor: not-allowed;
+  }
+
   @media #{$layout-mobile-lg} {
     height: $input-button-height - 5;
     line-height: $input-button-height - 5;

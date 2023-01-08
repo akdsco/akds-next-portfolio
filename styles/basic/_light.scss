@@ -156,6 +156,10 @@
     }
   }
 
+  .mi-loader div {
+    background: $light-color-theme;
+  }
+
   /**
  * Button
  */
@@ -170,6 +174,10 @@
 
     &:hover {
       color: #ffffff;
+    }
+
+    &:disabled {
+      background: $light-color-body;
     }
   }
 
