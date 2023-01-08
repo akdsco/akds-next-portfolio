@@ -6,8 +6,6 @@ import PinDropIcon from "@mui/icons-material/PinDrop";
 import { SectionTitle, Layout, Loader } from "../components";
 import database from "../data/database";
 
-// TODO add form functionality
-
 interface ContactForm {
   name: string;
   email: string;

@@ -8,9 +8,9 @@ import { Layout, SocialIcons } from "../components";
 import database from "../data/database";
 import { useTheme } from "next-themes";
 import { particlesConfig } from "../data/particlesConfig";
+import { Nunito } from "@next/font/google";
 
-// TODO implement google font through next.js?
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({ subsets: ["latin"], display: "swap" });
 
 export default function Home() {
   const { theme } = useTheme();
@@ -29,7 +29,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      <Layout className={nunito.className}>
         <div className="mi-home-area mi-padding-section">
           <Particles
             init={particlesInit}

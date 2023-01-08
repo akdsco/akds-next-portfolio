@@ -3,11 +3,12 @@ import { BackgroundLines, Header } from "../components";
 
 interface ILayout {
   children: JSX.Element | JSX.Element[];
+  className: string;
 }
 
-function Layout({ children }: ILayout) {
+function Layout({ children, className }: ILayout) {
   return (
-    <div className="mi-wrapper">
+    <div className={`mi-wrapper ${className}`}>
       <BackgroundLines />
       <Header />
       {children}
