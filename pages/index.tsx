@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 import React from "react";
 import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
@@ -8,9 +7,6 @@ import { Layout, SocialIcons } from "../components";
 import database from "../data/database";
 import { useTheme } from "next-themes";
 import { particlesConfig } from "../data/particlesConfig";
-import { Nunito } from "@next/font/google";
-
-const nunito = Nunito({ subsets: ["latin"], display: "swap" });
 
 export default function Home() {
   const { theme } = useTheme();
@@ -29,7 +25,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout className={nunito.className}>
+      <Layout>
         <div className="mi-home-area mi-padding-section">
           <Particles
             init={particlesInit}

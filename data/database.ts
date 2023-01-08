@@ -22,8 +22,8 @@ const database = {
     },
     brandImage: "/images/brand-image.jpg",
     aboutImage: "/images/about-image.jpg",
-    aboutImageLg: "/images/about-image-lg.jpg",
-    cvFile: "./files/arkadiusz-resume.pdf",
+    aboutImageLg: "",
+    cvFile: "",
   },
   services: [
     {
@@ -148,26 +148,36 @@ const database = {
   experience: {
     workingExperience: [
       {
-        id: 0,
-        year: "2020 Nov - present",
-        position: "Full Stack Software Developer",
-        company: "Connect4",
-        details: "",
+        id: 4,
+        year: "2022 Mar - present",
+        position: "Software Engineer",
+        company: "Noah Media Group",
+        details: "Building new technologies for the film makers.",
       },
       {
-        id: 1,
+        id: 3,
+        year: "2020 Nov - 2022 Mar",
+        position: "Full Stack Software Developer",
+        company: "Connect4",
+        details:
+          "Built a scalable, highly responsive and multi user application for online meetings. We worked with Meteor JS to achieve a seamless " +
+          "multi user experience of a native application that was delivered through the web browser. We relied on MongoDB in the cloud and built the frontend with" +
+          " React.JS framework. We focused on functional programming paired with Hexagonal Architecture (Port and Adapter Pattern).",
+      },
+      {
+        id: 2,
         year: "2020 Jul - 2020 Nov",
         position: "JavaScript Software Developer",
         company: "Wutzu Technologies",
         details:
           "Improved the robustness of the application through relentless code refactoring, removing unnecessary bloated code and" +
           " replacing big class components with small functional ones. I addressed all asynchronous problems implementing" +
-          " JS Promises and wrote clean functions that always behave the same way. This directly impacted user experience of the whole" +
-          " application and improved usability. Currently working on streamlining the shop onboard process to make it an automated and" +
-          " fast for any shop eligible to join the platform.",
+          " JS Promises and wrote clean functions that delivered consistent app behaviour. This directly impacted user experience of the whole" +
+          " application and improved usability. Streamlined the shop onboard process to make it easy and" +
+          " fast for any shop eligible to join the platform and start selling products as soon as possible.",
       },
       {
-        id: 2,
+        id: 1,
         year: "2020 May - 2020 Jul",
         position: "Intern Software Developer",
         company: "Wutzu Technologies",
@@ -178,7 +188,7 @@ const database = {
           "chain of stores as our clients.\n",
       },
       {
-        id: 3,
+        id: 0,
         year: "2018 - 2019",
         position: "Freelance Web Developer",
         company: "Self-employed",
@@ -189,7 +199,7 @@ const database = {
     ],
     educationExperience: [
       {
-        id: 2,
+        id: 1,
         year: "2020",
         graduation: "Bachelors in Software Development - Front End",
         university: "Openclassrooms.com",
@@ -200,7 +210,7 @@ const database = {
           "resources, online reading, real-life projects, and individual mentoring sessions with senior developers.",
       },
       {
-        id: 3,
+        id: 0,
         year: "2019",
         graduation: "Software Development Specialization",
         university: "ucertify.com",
