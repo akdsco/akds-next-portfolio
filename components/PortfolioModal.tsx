@@ -14,7 +14,6 @@ interface IPortfolioModal {
 
 function PortfolioModal({ title, show, handleClose, data }: IPortfolioModal) {
   const [portfolioInfo, setPortfolioInfo] = useState("");
-  console.log(data);
 
   useEffect(() => {
     let cancelled = false;
