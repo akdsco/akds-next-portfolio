@@ -3,7 +3,7 @@ import { BackgroundLines, Header } from "../components";
 
 interface ILayout {
   children: JSX.Element | JSX.Element[];
-  className: string;
+  className?: string;
 }
 
 function Layout({ children, className }: ILayout) {
