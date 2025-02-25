@@ -6,16 +6,16 @@ import CloseIcon from "@mui/icons-material/Close";
 import brandImg from "../public/img/brand-image.jpg";
 
 function Header() {
-  const [navigationToggler, setNavigationToggler] = useState<boolean>(false);
+  const [navigationToggle, setNavigationToggle] = useState<boolean>(false);
 
-  const handleNavigationToggler = () => {
-    setNavigationToggler(!navigationToggler);
+  const handleNavigationChange = () => {
+    setNavigationToggle(!navigationToggle);
   };
 
   return (
-    <nav className={navigationToggler ? "mi-header is-visible" : "mi-header"}>
-      <button onClick={handleNavigationToggler} className="mi-header-toggler">
-        {!navigationToggler ? <MenuIcon /> : <CloseIcon />}
+    <nav className={navigationToggle ? "mi-header is-visible" : "mi-header"}>
+      <button onClick={handleNavigationChange} className="mi-header-toggler">
+        {!navigationToggle ? <MenuIcon /> : <CloseIcon />}
       </button>
       <div className="mi-header-inner">
         <div className="mi-header-image">
@@ -52,7 +52,7 @@ function Header() {
           </li>
         </ul>
         <p className="mi-header-copyright">
-          &copy; {new Date().getFullYear()} <b>arkadiusz.tech</b>
+          &copy; {new Date().getFullYear()} <b>akds.tech</b>
         </p>
       </div>
     </nav>
