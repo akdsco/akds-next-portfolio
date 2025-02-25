@@ -1,6 +1,6 @@
 import React from "react";
 import { Portfolio } from "./Portfolio";
-import { IPortfolio } from "../pages/portfolio";
+import { IPortfolio } from "../pages/projects";
 
 function PortfoliosView({ portfolios }: { portfolios: IPortfolio[] }) {
   return (

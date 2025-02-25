@@ -4,7 +4,7 @@ import Image from "next/image";
 import InfoIcon from "@mui/icons-material/Info";
 import LinkIcon from "@mui/icons-material/Link";
 import { PortfolioModal } from "./PortfolioModal";
-import { IPortfolio } from "../pages/portfolio";
+import { IPortfolio } from "../pages/projects";
 
 function Portfolio({
   title,

@@ -36,13 +36,8 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/resume">
-              <span>Resume</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/portfolio">
-              <span>Portfolio</span>
+            <Link href="/projects">
+              <span>Projects</span>
             </Link>
           </li>
           <li>

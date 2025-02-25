@@ -15,7 +15,7 @@
     "@mui/material": "^5.16.14",
     "@vercel/analytics": "^1.5.0",
     "bootstrap": "^5.3.3",
-    "eslint": "8.57.1",
+    "eslint": "9.21.0",
     "eslint-config-next": "15.1.7",
     "fslightbox-react": "^1.7.6",
     "next": "15.1.7",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@types/fslightbox-react": "^1.7.8",
-    "@types/node": "^18.19.76",
+    "@types/node": "^22.13.5",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
