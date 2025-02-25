@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
+// import ReactMarkdown from "react-markdown";
 import { SectionTitleModal } from "./SectionTitleModal";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -41,28 +41,28 @@ function PortfolioModal({ title, show, handleClose, data }: IPortfolioModal) {
     >
       <Modal.Body>
         <SectionTitleModal title={title} />
-        <ReactMarkdown
-          children={portfolioInfo}
-          components={{
-            code({ node, inline, className, children, ...props }) {
-              const match = /language-(\w+)/.exec(className || "");
-              return !inline && match ? (
-                <SyntaxHighlighter
-                  PreTag="div"
-                  // @ts-ignore
-                  style={materialDark}
-                  language={match[1]}
-                  children={String(children).replace(/\n$/, "")}
-                  {...props}
-                />
-              ) : (
-                <code className={className} {...props}>
-                  {children}
-                </code>
-              );
-            },
-          }}
-        />
+        {/*<ReactMarkdown*/}
+        {/*  children={portfolioInfo}*/}
+        {/*  components={{*/}
+        {/*    code({ node, inline, className, children, ...props }) {*/}
+        {/*      const match = /language-(\w+)/.exec(className || "");*/}
+        {/*      return !inline && match ? (*/}
+        {/*        <SyntaxHighlighter*/}
+        {/*          PreTag="div"*/}
+        {/*          // @ts-ignore*/}
+        {/*          style={materialDark}*/}
+        {/*          language={match[1]}*/}
+        {/*          children={String(children).replace(/\n$/, "")}*/}
+        {/*          {...props}*/}
+        {/*        />*/}
+        {/*      ) : (*/}
+        {/*        <code className={className} {...props}>*/}
+        {/*          {children}*/}
+        {/*        </code>*/}
+        {/*      );*/}
+        {/*    },*/}
+        {/*  }}*/}
+        {/*/>*/}
         <button onClick={handleClose} className="mi-button text-white">
           Return
         </button>
