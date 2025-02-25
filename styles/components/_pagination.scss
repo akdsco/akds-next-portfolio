@@ -1,3 +1,5 @@
+@use "../variables";
+
 /*
  * Pagination
  */
@@ -17,17 +19,17 @@
 
     a {
       display: inline-block;
-      border: 1px solid $color-theme;
+      border: 1px solid variables.$color-theme;
       height: 40px;
       width: 40px;
       text-align: center;
-      color: $color-theme;
+      color: variables.$color-theme;
       line-height: 38px;
     }
 
     &.is-active {
       a {
-        background: $color-theme;
+        background: variables.$color-theme;
         color: #ffffff;
       }
     }

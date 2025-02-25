@@ -1,3 +1,5 @@
+@use "../variables";
+
 /**
  * Button
  */
@@ -5,7 +7,7 @@
 .mi-button {
   position: relative;
   padding: 0 30px;
-  background: $color-theme;
+  background: variables.$color-theme;
   color: #ffffff;
   border: 0;
   display: inline-block;
@@ -13,9 +15,9 @@
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 2px;
-  height: $input-button-height;
-  line-height: $input-button-height;
-  transition: $transition;
+  height: variables.$input-button-height;
+  line-height: variables.$input-button-height;
+  transition: variables.$transition;
 
   &::before {
     content: "";
@@ -29,7 +31,7 @@
     z-index: -1;
     transform: scaleX(0);
     transform-origin: 0 0;
-    transition: $transition;
+    transition: variables.$transition;
   }
 
   &:hover {
@@ -41,20 +43,20 @@
   }
 
   &:disabled {
-    background: $color-body;
+    background: variables.$color-body;
     cursor: not-allowed;
   }
 
-  @media #{$layout-mobile-lg} {
-    height: $input-button-height - 5;
-    line-height: $input-button-height - 5;
+  @media #{variables.$layout-mobile-lg} {
+    height: variables.$input-button-height - 5;
+    line-height: variables.$input-button-height - 5;
   }
 }
 
 .mi-read-more {
   position: relative;
-  color: $color-theme;
-  transition: $transition;
+  color: variables.$color-theme;
+  transition: variables.$transition;
 
   &::after {
     content: "";
@@ -64,12 +66,12 @@
     bottom: 0;
     height: 1px;
     width: 0;
-    background: $color-theme;
-    transition: $transition;
+    background: variables.$color-theme;
+    transition: variables.$transition;
   }
 
   &:hover {
-    color: $color-theme;
+    color: variables.$color-theme;
 
     &::after {
       width: 100%;

@@ -1,9 +1,12 @@
+@use "sass:color";
+@use "../variables";
+
 /**
  * Blog Styles
  */
 
 .mi-blog {
-  background: lighten($color-bg-body, 5);
+  background: color.adjust(variables.$color-bg-body, $lightness: 5%);
   padding: 15px;
 
   &-image {
@@ -11,7 +14,7 @@
     overflow: hidden;
 
     img {
-      transition: $transition;
+      transition: variables.$transition;
       width: 100%;
     }
   }
@@ -20,7 +23,7 @@
     position: absolute;
     left: 20px;
     top: 20px;
-    background: rgba($color-theme, 0.8);
+    background: rgba(variables.$color-theme, 0.8);
     color: #ffffff;
     padding: 10px;
     text-align: center;
@@ -52,15 +55,15 @@
       margin-bottom: 0;
 
       a {
-        transition: $transition;
-        color: $color-heading;
+        transition: variables.$transition;
+        color: variables.$color-heading;
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
 
         &:hover {
-          color: $color-theme;
+          color: variables.$color-theme;
         }
       }
     }

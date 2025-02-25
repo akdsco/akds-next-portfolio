@@ -1,3 +1,5 @@
+@use "../variables";
+
 /*
  * About Styles
  */
@@ -13,7 +15,7 @@
       top: 0;
       height: 65%;
       width: 15px;
-      background: rgba($color-theme, 0.6);
+      background: rgba(variables.$color-theme, 0.6);
     }
 
     &::after {
@@ -25,7 +27,7 @@
       bottom: 0;
       height: 65%;
       width: 15px;
-      background: rgba($color-theme, 0.6);
+      background: rgba(variables.$color-theme, 0.6);
     }
 
     img {
@@ -101,13 +103,13 @@
     }
   }
 
-  @media #{$layout-tablet} {
+  @media #{variables.$layout-tablet} {
     &-content {
       margin-top: 30px;
     }
   }
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     &-image {
       &-icon {
         height: 70px;

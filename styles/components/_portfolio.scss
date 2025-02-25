@@ -1,3 +1,5 @@
+@use "../variables";
+
 /**
  * /*
  * Portfolio
@@ -6,7 +8,7 @@
  */
 
 .mi-portfolio {
-  transition: $transition;
+  transition: variables.$transition;
   visibility: hidden;
   opacity: 0;
 
@@ -22,7 +24,7 @@
       height: calc(100% - 30px);
       width: calc(100% - 30px);
       background: rgba(#ffffff, 0.9);
-      transition: $transition;
+      transition: variables.$transition;
       transform: scaleX(0);
       transform-origin: 0;
     }
@@ -60,21 +62,21 @@
           vertical-align: middle;
           text-align: center;
           line-height: 1;
-          background: $color-body;
+          background: variables.$color-body;
           color: #ffffff;
-          border: 1px solid $color-body;
+          border: 1px solid variables.$color-body;
           border-radius: 100px;
           outline: none;
           font-size: 1.25rem;
-          transition: $transition;
+          transition: variables.$transition;
 
           svg {
             height: 100%;
           }
 
           &:hover {
-            background: $color-theme;
-            border-color: $color-theme;
+            background: variables.$color-theme;
+            border-color: variables.$color-theme;
           }
         }
       }
@@ -82,23 +84,23 @@
   }
 
   h5 {
-    color: $color-heading;
+    color: variables.$color-heading;
     margin-top: 15px;
     margin-bottom: 0;
     font-weight: 700;
 
     a {
       color: #ffffff;
-      transition: $transition;
+      transition: variables.$transition;
 
       &:hover {
-        color: $color-theme;
+        color: variables.$color-theme;
       }
     }
   }
 
   h6 {
-    color: $color-body;
+    color: variables.$color-body;
     margin-bottom: 0;
   }
 

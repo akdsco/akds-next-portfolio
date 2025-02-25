@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../variables";
+
 .notfound {
   display: flex;
   align-items: center;
@@ -6,7 +9,7 @@
   width: 100%;
 
   &-inner {
-    background: lighten($color-bg-body, 5);
+    background: color.adjust(variables.$color-bg-body, $lightness: 5%);
     padding: 100px 50px;
     width: 100%;
   }
@@ -27,13 +30,13 @@
     margin-top: 20px;
   }
 
-  @media #{$layout-tablet} {
+  @media #{variables.$layout-tablet} {
     h1 {
       font-size: 10.5rem;
     }
   }
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     &-inner {
       padding: 75px 15px;
     }
@@ -44,7 +47,7 @@
     }
   }
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     &-inner {
       padding: 65px 15px;
     }

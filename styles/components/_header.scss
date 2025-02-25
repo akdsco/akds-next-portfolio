@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../variables";
+
 /**
  * Header Styles
  */
@@ -9,10 +12,10 @@
   transform: translateX(0);
   height: 100vh;
   width: 300px;
-  background: lighten($color-bg-body, 5);
-  border-right: 1px solid $color-border;
+  background: color.adjust(variables.$color-bg-body, $lightness: 5%);
+  border-right: 1px solid variables.$color-border;
   z-index: 10;
-  transition: $transition;
+  transition: variables.$transition;
 
   &-inner {
     width: 100%;
@@ -30,18 +33,18 @@
     left: 100%;
     top: 20px;
     padding: 0;
-    height: $input-button-height;
+    height: variables.$input-button-height;
     width: 50px;
     text-align: center;
     font-size: 1.6rem;
-    background: lighten($color-bg-body, 5);
+    background: color.adjust(variables.$color-bg-body, $lightness: 5%);
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
 
     &:focus {
-      border-color: $color-border;
+      border-color: variables.$color-border;
     }
   }
 
@@ -50,13 +53,13 @@
     display: block;
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid variables.$color-border;
 
     a {
       height: 200px;
       width: 200px;
       border-radius: 1000px;
-      border: 7px solid $color-border;
+      border: 7px solid variables.$color-border;
       overflow: hidden;
       display: inline-block;
       vertical-align: middle;
@@ -86,8 +89,8 @@
         letter-spacing: 1px;
         display: block;
         padding: 5px 0;
-        color: $color-body;
-        transition: $transition;
+        color: variables.$color-body;
+        transition: variables.$transition;
         font-weight: 600;
         position: relative;
         overflow: hidden;
@@ -101,14 +104,14 @@
           right: 100%;
           height: 100%;
           width: 0;
-          background: rgba($color-theme, 0.2);
+          background: rgba(variables.$color-theme, 0.2);
           visibility: hidden;
-          transition: $transition;
+          transition: variables.$transition;
           z-index: -1;
         }
 
         &:hover {
-          color: $color-theme;
+          color: variables.$color-theme;
 
           &::before {
             width: 100%;
@@ -120,7 +123,7 @@
           color: #ffffff;
 
           &::before {
-            background: $color-theme;
+            background: variables.$color-theme;
             width: 100%;
             visibility: visible;
           }
@@ -136,14 +139,14 @@
     margin-bottom: 0;
     font-size: 1rem;
     padding: 15px 0;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid variables.$color-border;
 
     a {
-      color: $color-body;
-      transition: $transition;
+      color: variables.$color-body;
+      transition: variables.$transition;
 
       &:hover {
-        color: $color-theme;
+        color: variables.$color-theme;
       }
     }
   }
@@ -152,11 +155,11 @@
     transform: translateX(0);
   }
 
-  @media #{$layout-laptop} {
+  @media #{variables.$layout-laptop} {
     width: 260px;
   }
 
-  @media #{$layout-notebook} {
+  @media #{variables.$layout-notebook} {
     width: 260px;
     transform: translateX(-100%);
 
@@ -180,7 +183,7 @@
     }
   }
 
-  @media #{$layout-tablet} {
+  @media #{variables.$layout-tablet} {
     width: 250px;
     transform: translateX(-100%);
 
@@ -204,7 +207,7 @@
     }
   }
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     width: 250px;
     transform: translateX(-100%);
 

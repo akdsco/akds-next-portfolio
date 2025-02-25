@@ -1,18 +1,21 @@
+@use "sass:color";
+@use "../variables";
+
 /**
  * Service
  */
 
 .mi-service {
-  border: 1px solid $color-border;
-  border-top: 5px solid $color-border;
+  border: 1px solid variables.$color-border;
+  border-top: 5px solid variables.$color-border;
   padding: 30px;
-  background: lighten($color-bg-body, 5);
-  transition: $transition;
+  background: color.adjust(variables.$color-bg-body, $lightness: 5%);
+  transition: variables.$transition;
 
   &-icon {
     margin-bottom: 20px;
     display: inline-block;
-    color: $color-theme;
+    color: variables.$color-theme;
     font-size: 2.5rem;
   }
 
@@ -30,7 +33,7 @@
       bottom: 0;
       height: 2px;
       width: 50px;
-      background: $color-border;
+      background: variables.$color-border;
     }
   }
 
@@ -39,14 +42,14 @@
   }
 
   &:hover {
-    border-top-color: $color-theme;
+    border-top-color: variables.$color-theme;
   }
 
-  @media #{$layout-laptop} {
+  @media #{variables.$layout-laptop} {
     padding: 20px;
   }
 
-  @media #{$layout-mobile-sm} {
+  @media #{variables.$layout-mobile-sm} {
     padding: 20px;
   }
 }

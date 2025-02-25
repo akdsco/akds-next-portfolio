@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../mixins";
+@use "../variables";
+
 /** @format */
 
 .light {
@@ -14,11 +18,11 @@
   }
 
   & {
-    color: $light-color-body;
-    background: $light-color-bg-body;
+    color: variables.$light-color-body;
+    background: variables.$light-color-bg-body;
   }
 
-  @include placeholder-color($light-color-body);
+  @include mixins.placeholder-color(variables.$light-color-body);
 
   h1,
   h2,
@@ -26,16 +30,16 @@
   h4,
   h5,
   h6 {
-    color: $light-color-heading;
+    color: variables.$light-color-heading;
   }
 
   ::-moz-selection {
-    background: $light-color-theme;
+    background: variables.$light-color-theme;
     color: #ffffff;
   }
 
   ::selection {
-    background: $light-color-theme;
+    background: variables.$light-color-theme;
     color: #ffffff;
   }
 
@@ -43,26 +47,26 @@
   button,
   select,
   textarea {
-    border-color: $light-color-border;
-    color: $light-color-body;
-    @include placeholder-color($light-color-body);
+    border-color: variables.$light-color-border;
+    color: variables.$light-color-body;
+    @include mixins.placeholder-color(variables.$light-color-body);
 
     &:focus,
     &:active {
-      border-color: $light-color-theme;
+      border-color: variables.$light-color-theme;
     }
   }
 
   blockquote {
-    border-color: $light-color-theme;
-    background: darken($light-color-bg-body, 5);
+    border-color: variables.$light-color-theme;
+    background: color.adjust(variables.$light-color-bg-body, $lightness: -5%);
 
     footer {
       a {
-        color: $light-color-theme;
+        color: variables.$light-color-theme;
 
         &:hover {
-          color: $light-color-theme;
+          color: variables.$light-color-theme;
         }
       }
     }
@@ -70,7 +74,7 @@
 
   .stylish-list {
     i {
-      color: $light-color-theme;
+      color: variables.$light-color-theme;
     }
   }
 
@@ -79,17 +83,17 @@
   input[type="radio"] {
     & ~ label {
       &:before {
-        border-color: $light-color-border;
+        border-color: variables.$light-color-border;
       }
     }
 
     &:checked {
       & ~ label {
-        color: $light-color-theme;
+        color: variables.$light-color-theme;
 
         &:before {
-          color: $light-color-theme;
-          border-color: $light-color-theme;
+          color: variables.$light-color-theme;
+          border-color: variables.$light-color-theme;
         }
       }
     }
@@ -98,15 +102,15 @@
   input[type="radio"] {
     & ~ label {
       &::before {
-        border: 2px solid $light-color-border;
+        border: 2px solid variables.$light-color-border;
       }
     }
 
     &:checked {
       & ~ label {
         &::before {
-          color: $light-color-theme;
-          border-color: $light-color-theme;
+          color: variables.$light-color-theme;
+          border-color: variables.$light-color-theme;
         }
       }
     }
@@ -119,12 +123,12 @@
  */
 
   .color-theme {
-    color: $light-color-theme;
+    color: variables.$light-color-theme;
   }
 
   .mi-bg-lines {
     span {
-      background: rgba($light-color-border, 0.5);
+      background: rgba(variables.$light-color-border, 0.5);
     }
   }
 
@@ -142,7 +146,7 @@
     }
 
     &-switch {
-      background: $light-color-border;
+      background: variables.$light-color-border;
 
       &::after {
         background: #ffffff;
@@ -150,14 +154,14 @@
 
       &.active {
         &::after {
-          background: $light-color-theme;
+          background: variables.$light-color-theme;
         }
       }
     }
   }
 
   .mi-loader div {
-    background: $light-color-theme;
+    background: variables.$light-color-theme;
   }
 
   /**
@@ -165,7 +169,7 @@
  */
 
   .mi-button {
-    background: $light-color-theme;
+    background: variables.$light-color-theme;
     color: #ffffff;
 
     &::before {
@@ -177,19 +181,19 @@
     }
 
     &:disabled {
-      background: $light-color-body;
+      background: variables.$light-color-body;
     }
   }
 
   .mi-read-more {
-    color: $light-color-theme;
+    color: variables.$light-color-theme;
 
     &::after {
-      background: $light-color-theme;
+      background: variables.$light-color-theme;
     }
 
     &:hover {
-      color: $light-color-theme;
+      color: variables.$light-color-theme;
     }
   }
 
@@ -200,13 +204,13 @@
   .mi-pagination {
     li {
       a {
-        border-color: $light-color-theme;
-        color: $light-color-theme;
+        border-color: variables.$light-color-theme;
+        color: variables.$light-color-theme;
       }
 
       &.is-active {
         a {
-          background: $light-color-theme;
+          background: variables.$light-color-theme;
           color: #ffffff;
         }
       }
@@ -218,43 +222,43 @@
  */
 
   .mi-header {
-    background: darken($light-color-bg-body, 5);
-    border-color: $light-color-border;
+    background: color.adjust(variables.$light-color-bg-body, $lightness: -5%);
+    border-color: variables.$light-color-border;
 
     &-toggler {
-      background: darken($light-color-bg-body, 5);
+      background: color.adjust(variables.$light-color-bg-body, $lightness: -5%);
 
       &:focus {
-        border-color: $light-color-border;
+        border-color: variables.$light-color-border;
       }
     }
 
     &-image {
-      border-color: $light-color-border;
+      border-color: variables.$light-color-border;
 
       a {
-        border-color: $light-color-border;
+        border-color: variables.$light-color-border;
       }
     }
 
     &-menu {
       li {
         a {
-          color: $light-color-body;
+          color: variables.$light-color-body;
 
           &::before {
-            background: rgba($light-color-theme, 0.2);
+            background: rgba(variables.$light-color-theme, 0.2);
           }
 
           &:hover {
-            color: $light-color-theme;
+            color: variables.$light-color-theme;
           }
 
           &.active {
             color: #ffffff;
 
             &::before {
-              background: $light-color-theme;
+              background: variables.$light-color-theme;
             }
           }
         }
@@ -262,13 +266,13 @@
     }
 
     &-copyright {
-      border-color: $light-color-border;
+      border-color: variables.$light-color-border;
 
       a {
-        color: $light-color-body;
+        color: variables.$light-color-body;
 
         &:hover {
-          color: $light-color-theme;
+          color: variables.$light-color-theme;
         }
       }
     }
@@ -281,17 +285,17 @@
   .mi-social-icons {
     li {
       a {
-        color: $light-color-body;
+        color: variables.$light-color-body;
 
         svg {
-          fill: $light-color-body;
+          fill: variables.$light-color-body;
         }
 
         &:hover {
-          color: $light-color-theme;
+          color: variables.$light-color-theme;
 
           svg path {
-            fill: $light-color-theme;
+            fill: variables.$light-color-theme;
           }
         }
       }
@@ -300,10 +304,10 @@
     &-bordered {
       li {
         a {
-          border-color: $light-color-border;
+          border-color: variables.$light-color-border;
 
           &:hover {
-            border-color: $light-color-theme;
+            border-color: variables.$light-color-theme;
           }
         }
       }
@@ -321,18 +325,18 @@
 
     h2 {
       &::before {
-        background: rgba($light-color-theme, 0.3);
+        background: rgba(variables.$light-color-theme, 0.3);
       }
 
       &::after {
-        background: $light-color-theme;
+        background: variables.$light-color-theme;
       }
     }
   }
 
   .mi-small-title {
     &-icon {
-      color: $light-color-body;
+      color: variables.$light-color-body;
     }
   }
 
@@ -342,11 +346,11 @@
 
   .mi-progress {
     &-container {
-      background: $light-color-border;
+      background: variables.$light-color-border;
     }
 
     &-active {
-      background: $light-color-theme;
+      background: variables.$light-color-theme;
     }
   }
 
@@ -355,21 +359,21 @@
  */
 
   .mi-service {
-    border-color: $light-color-border;
-    background: darken($light-color-bg-body, 5);
+    border-color: variables.$light-color-border;
+    background: color.adjust(variables.$light-color-bg-body, $lightness: -5%);
 
     &-icon {
-      color: $light-color-theme;
+      color: variables.$light-color-theme;
     }
 
     h5 {
       &::before {
-        background: $light-color-border;
+        background: variables.$light-color-border;
       }
     }
 
     &:hover {
-      border-top-color: $light-color-theme;
+      border-top-color: variables.$light-color-theme;
     }
   }
 
@@ -387,13 +391,13 @@
         li {
           a,
           button {
-            background: $light-color-body;
+            background: variables.$light-color-body;
             color: #ffffff;
-            border: 1px solid $light-color-body;
+            border: 1px solid variables.$light-color-body;
 
             &:hover {
-              background: $light-color-theme;
-              border-color: $light-color-theme;
+              background: variables.$light-color-theme;
+              border-color: variables.$light-color-theme;
             }
           }
         }
@@ -401,19 +405,19 @@
     }
 
     h5 {
-      color: $light-color-heading;
+      color: variables.$light-color-heading;
 
       a {
-        color: $light-color-heading;
+        color: variables.$light-color-heading;
 
         &:hover {
-          color: $light-color-theme;
+          color: variables.$light-color-theme;
         }
       }
     }
 
     h6 {
-      color: $light-color-body;
+      color: variables.$light-color-body;
     }
   }
 
@@ -423,31 +427,31 @@
 
   .mi-resume {
     &-wrapper {
-      border-color: $light-color-border;
+      border-color: variables.$light-color-border;
     }
 
     &-summary {
       &::before {
-        background: $light-color-bg-body;
-        border-color: $light-color-border;
+        background: variables.$light-color-bg-body;
+        border-color: variables.$light-color-border;
       }
     }
 
     &-year {
-      color: $light-color-body;
+      color: variables.$light-color-body;
     }
 
     &-company {
-      color: $light-color-heading;
+      color: variables.$light-color-heading;
     }
 
     &-details {
       &::before {
-        background: $light-color-border;
+        background: variables.$light-color-border;
       }
 
       h5 {
-        color: $light-color-theme;
+        color: variables.$light-color-theme;
       }
     }
   }
@@ -458,18 +462,18 @@
 
   .mi-testimonial {
     &-content {
-      border-color: $light-color-border;
-      background: darken($light-color-bg-body, 5);
+      border-color: variables.$light-color-border;
+      background: color.adjust(variables.$light-color-bg-body, $lightness: -5%);
 
       &::after {
-        border-color: darken($light-color-bg-body, 5) transparent transparent
-          darken($light-color-bg-body, 5);
+        border-color: color.adjust(variables.$light-color-bg-body, $lightness: -5%) transparent transparent
+          color.adjust(variables.$light-color-bg-body, $lightness: -5%);
       }
     }
 
     &-author {
       h6 {
-        color: $light-color-body;
+        color: variables.$light-color-body;
       }
     }
   }
@@ -481,12 +485,12 @@
   .mi-form {
     &-field {
       label {
-        background: $light-color-bg-body;
+        background: variables.$light-color-bg-body;
       }
 
       input,
       textarea {
-        border-color: $light-color-border;
+        border-color: variables.$light-color-border;
       }
     }
   }
@@ -496,20 +500,20 @@
  */
 
   .mi-blog {
-    background: darken($light-color-bg-body, 5);
+    background: color.adjust(variables.$light-color-bg-body, $lightness: -5%);
 
     &-date {
-      background: rgba($light-color-theme, 0.8);
+      background: rgba(variables.$light-color-theme, 0.8);
       color: #ffffff;
     }
 
     &-content {
       h5 {
         a {
-          color: $light-color-heading;
+          color: variables.$light-color-heading;
 
           &:hover {
-            color: $light-color-theme;
+            color: variables.$light-color-theme;
           }
         }
       }
@@ -518,7 +522,7 @@
 
   .notfound {
     &-inner {
-      background: darken($light-color-bg-body, 5);
+      background: color.adjust(variables.$light-color-bg-body, $lightness: -5%);
     }
 
     h1 {
@@ -533,11 +537,11 @@
   .mi-about {
     &-image {
       &::before {
-        background: rgba($light-color-theme, 0.6);
+        background: rgba(variables.$light-color-theme, 0.6);
       }
 
       &::after {
-        background: rgba($light-color-theme, 0.6);
+        background: rgba(variables.$light-color-theme, 0.6);
       }
 
       &-icon {
@@ -552,19 +556,19 @@
 
   .mi-contact {
     &-info-block {
-      background: rgba(darken($light-color-bg-body, 5), 1);
+      background: rgba(color.adjust(variables.$light-color-bg-body, $lightness: -5%), 1);
 
       &-icon {
-        border-color: $light-color-border;
+        border-color: variables.$light-color-border;
       }
 
       &-content {
         p {
           a {
-            color: $light-color-body;
+            color: variables.$light-color-body;
 
             &:hover {
-              color: $light-color-theme;
+              color: variables.$light-color-theme;
             }
           }
         }
