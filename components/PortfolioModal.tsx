@@ -22,7 +22,6 @@ function PortfolioModal({ title, show, handleClose, data }: IPortfolioModal) {
       .then((res) => res.text())
       .then((itemData) => {
         if (!cancelled) {
-          // noinspection JSCheckFunctionSignatures
           setPortfolioInfo(itemData);
         }
       })

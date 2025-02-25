@@ -1,7 +1,7 @@
-import React from "react";
+import React, {PropsWithChildren} from "react";
 import { ReactProps } from "../lib";
 
-export const Loader: React.FC<ReactProps> = ({ className }) => (
+export const Loader = ({ className }: PropsWithChildren<ReactProps>) => (
   <div className={`mi-loader ${className}`}>
     <div />
     <div />

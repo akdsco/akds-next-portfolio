@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, type JSX } from "react";
 import Head from "next/head";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -76,7 +76,7 @@ export default function Contact() {
       return loadError("Message is required.");
     }
 
-    // If no errors, send message
+    // If no errors, send a message
     await sendMessage(formData);
   };
 

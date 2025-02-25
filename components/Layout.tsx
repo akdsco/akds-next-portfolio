@@ -1,11 +1,7 @@
-import React from "react";
+import React, { PropsWithChildren} from "react";
 import { BackgroundLines, Header } from "../components";
 
-interface ILayout {
-  children: JSX.Element | JSX.Element[];
-}
-
-function Layout({ children }: ILayout) {
+function Layout({ children }: PropsWithChildren) {
   return (
     <div className="mi-wrapper">
       <BackgroundLines />

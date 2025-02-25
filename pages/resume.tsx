@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type JSX } from "react";
 import Head from "next/head";
 import { SectionTitle, SmallTitle, Layout, TimelineItem } from "../components";
 import WorkIcon from "@mui/icons-material/Work";
