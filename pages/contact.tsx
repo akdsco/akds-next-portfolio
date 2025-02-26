@@ -192,7 +192,7 @@ export default function Contact() {
                       disabled={formState === "loading"}
                     >
                       {formState === "ready"
-                        ? "Send mail"
+                        ? "Send"
                         : formState === "loading"
                         ? "Sending.."
                         : formState === "fail"

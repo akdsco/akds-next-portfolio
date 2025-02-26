@@ -5,9 +5,9 @@ const database = {
     age: null,
     phone: "",
     nationality: "",
-    language: "English, Polish",
+    language: "",
     email: "",
-    address: "London, UK",
+    address: "",
     freelanceStatus: "",
     socialLinks: {
       facebook: "",
@@ -122,27 +122,19 @@ const database = {
   portfolio: [
     {
       id: "1",
-      title: "wutzu.com",
-      subtitle: "React Node.js Firebase",
-      imageUrl: "/img/portfolio-thumb-one.png",
+      title: "SlateIQ",
+      subtitle: "TypeScript ● React ● Node.js ● MongoDB",
+      imageUrl: "/img/portfolio-slate-iq.png",
       data: "/data/data-p1.md",
-      url: "",
+      url: "https://slateiq.com",
     },
     {
       id: "2",
-      title: "meet a mentor",
-      subtitle: "JS HTML CSS3",
-      imageUrl: "/img/portfolio-thumb-two.png",
+      title: "Routes Wallet",
+      subtitle: "TypeScript ● React Native ● SQL",
+      imageUrl: "/img/portfolio-routes-wallet.png",
       data: "data/data-p2.md",
-      url: "https://meetamentor.co.uk",
-    },
-    {
-      id: "3",
-      title: "foodie b app",
-      subtitle: "React GoogleAPI SemanticUI",
-      imageUrl: "/img/portfolio-thumb-three.png",
-      data: "data/data-p3.md",
-      url: "https://foodie-b-app.web.app/",
+      url: "https://routeswallet.app",
     },
   ],
   experience: {
@@ -241,8 +233,8 @@ const database = {
   ],
   contactInfo: {
     phoneNumbers: ["Connecting..."],
-    emailAddress: ["Please use the form, it does work!"],
-    address: "East London, UK",
+    emailAddress: ["Use the form, see how swift I made it!"],
+    address: "",
   },
 };
 
