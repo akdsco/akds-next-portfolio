@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import brandImg from "../public/img/brand-image.jpg";
 
 function Header() {
   const [navigationToggle, setNavigationToggle] = useState<boolean>(false);
@@ -20,7 +19,7 @@ function Header() {
       <div className="mi-header-inner">
         <div className="mi-header-image">
           <Link href="/">
-            <Image src={brandImg} alt="brand logo" />
+            <Image src="/img/brand-image.jpg" width={200} height={200} alt="brand logo" />
           </Link>
         </div>
 

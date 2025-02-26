@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import { Layout, SectionTitle } from "../components";
 import database from "../data/database";
-import aboutImage from "../public/img/about-image.jpg";
 // import Slider from "react-slick";
 // import { sliderSettings } from "../data/sliderConfig";
 
@@ -44,7 +43,7 @@ export default function About() {
           <div className="row">
             <div className="col-lg-6">
               <div className="mi-about-image">
-                <Image src={aboutImage} alt="me" />
+                <Image src="/img/about-image.jpg" width={500} height={500} alt="me" />
               </div>
             </div>
             <div className="col-lg-6">
