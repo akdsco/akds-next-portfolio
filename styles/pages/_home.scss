@@ -1,3 +1,5 @@
+@use "../variables";
+
 /*
  * Home Styles
  */
@@ -40,19 +42,19 @@
     }
   }
 
-  @media #{$layout-laptop} {
+  @media #{variables.$layout-laptop} {
     &-content {
       padding: 50px 0;
     }
   }
 
-  @media #{$layout-notebook} {
+  @media #{variables.$layout-notebook} {
     &-content {
       padding: 50px 0;
     }
   }
 
-  @media #{$layout-tablet} {
+  @media #{variables.$layout-tablet} {
     &-content {
       padding: 50px 0;
 
@@ -63,7 +65,7 @@
     }
   }
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     &-content {
       padding: 50px 0;
 
@@ -74,7 +76,7 @@
     }
   }
 
-  @media #{$layout-mobile-sm} {
+  @media #{variables.$layout-mobile-sm} {
     &-content {
       h1 {
         span {

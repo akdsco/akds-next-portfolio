@@ -5,7 +5,7 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { ThemeSwitch } from "../components";
 import { Analytics } from "@vercel/analytics/react";
-import { Nunito } from "@next/font/google";
+import { Nunito } from "next/font/google";
 
 const nunito = Nunito({ subsets: ["latin"], display: "swap" });
 

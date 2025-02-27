@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import { Layout, SectionTitle } from "../components";
 import database from "../data/database";
-import aboutImage from "../public/img/about-image.jpg";
 // import Slider from "react-slick";
 // import { sliderSettings } from "../data/sliderConfig";
 
@@ -44,7 +43,7 @@ export default function About() {
           <div className="row">
             <div className="col-lg-6">
               <div className="mi-about-image">
-                <Image src={aboutImage} alt="me" />
+                <Image src="/img/about-image.jpg" width={1607} height={1050} alt="me" />
               </div>
             </div>
             <div className="col-lg-6">
@@ -53,33 +52,21 @@ export default function About() {
                   I am <span className="color-theme">{name}</span>
                 </h3>
                 <p>
-                  A Software Developer, living in London. I write readable
-                  JavaScript code and always remove all unused variables. My
-                  field of expertise revolves around all things JavaScript
-                  (React, Node, Firebase, Meteor, Jest and more). These days I
-                  also explore Python and grew some interest in functional
-                  programming.
+                  An experienced full-stack engineer in East London who excels
+                  at building scalable TypeScript solutions from front to back.
                 </p>
                 <p>
-                  During last year I{"'"}ve worked hard with a small bunch of
-                  motivated individuals to make online meetings less exhausting
-                  (think less zoom fatigue) and there{"'"}s already a small
-                  crowd of accountants ready to swear by our product!
+                  Always curious and learning, I’ve recently submitted an iOS app
+                  for beta testing, because I learn best by doing. Outside of coding,
+                  you’ll find me riding half-pro on a cycling team, training for triathlons,
+                  and based on my wives feedback, drinking way too much coffee.
                 </p>
                 <p>
-                  A bit of adrenaline junkie after work, riding mountain bikes,
-                  snowboards or train for triathlons, because why not? (probably
-                  drinks too much coffee while at it all). If you{"'"}ve gone
-                  that far in reading this bio I{"'"}d love to get to know you.
-                  You are special!
+                  Still here? Let’s connect — chat about your next big feature,
+                  market fit, scale up opportunities, coffee, or bicycles. No particular order.
                 </p>
 
                 <ul>
-                  {name && (
-                    <li>
-                      <b>Full Name</b> {name}
-                    </li>
-                  )}
                   {age && (
                     <li>
                       <b>Age</b> {age} Years

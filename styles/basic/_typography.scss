@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../mixins";
+@use "../variables";
+
 /**
  * Typography
  */
@@ -28,26 +32,26 @@
 html {
   overflow: hidden;
   overflow-y: auto;
-  background: $color-bg-body;
+  background: variables.$color-bg-body;
 }
 
 body {
   overflow: hidden !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: $fz-body;
+  font-size: variables.$fz-body;
   line-height: 1.8rem;
-  font-family: $ff-body;
-  color: $color-body;
+  font-family: variables.$ff-body;
+  color: variables.$color-body;
   font-weight: 400;
   background: unset;
 
-  @media #{$layout-tablet} {
-    font-size: $fz-body - 2;
+  @media #{variables.$layout-tablet} {
+    font-size: variables.$fz-body - 2;
   }
 
-  @media #{$layout-mobile-lg} {
-    font-size: $fz-body - 3;
+  @media #{variables.$layout-mobile-lg} {
+    font-size: variables.$fz-body - 3;
   }
 }
 
@@ -55,7 +59,7 @@ img {
   max-width: 100%;
 }
 
-@include placeholder-color($color-body);
+@include mixins.placeholder-color(variables.$color-body);
 
 h1,
 h2,
@@ -63,20 +67,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $ff-heading;
-  color: $color-heading;
+  font-family: variables.$ff-heading;
+  color: variables.$color-heading;
 }
 
 h1 {
   font-size: 3.2857rem;
   line-height: 4rem;
 
-  @media #{$layout-tablet} {
+  @media #{variables.$layout-tablet} {
     font-size: 2.9857rem;
     line-height: 3.4rem;
   }
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     font-size: 2.6857rem;
     line-height: 3.1rem;
   }
@@ -86,12 +90,12 @@ h2 {
   font-size: 2.57rem;
   line-height: 3.2857rem;
 
-  @media #{$layout-tablet} {
+  @media #{variables.$layout-tablet} {
     font-size: 2.37rem;
     line-height: 3.0857rem;
   }
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     font-size: 2.17rem;
     line-height: 2.857rem;
   }
@@ -101,7 +105,7 @@ h3 {
   font-size: 2rem;
   line-height: 2.7rem;
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     font-size: 1.91rem;
     line-height: 2.357rem;
   }
@@ -111,7 +115,7 @@ h4 {
   font-size: 1.71rem;
   line-height: 2.43rem;
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     font-size: 1.51rem;
     line-height: 2.13rem;
   }
@@ -121,7 +125,7 @@ h5 {
   font-size: 1.43rem;
   line-height: 2.14rem;
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     font-size: 1.23rem;
     line-height: 2.04rem;
   }
@@ -131,29 +135,29 @@ h6 {
   font-size: 1.14rem;
   line-height: 1.857rem;
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     font-size: 1.04rem;
     line-height: 1.657rem;
   }
 }
 
 ::-moz-selection {
-  background: $color-theme;
+  background: variables.$color-theme;
   color: #ffffff;
 }
 
 ::-ms-selection {
-  background: $color-theme;
+  background: variables.$color-theme;
   color: #ffffff;
 }
 
 ::-o-selection {
-  background: $color-theme;
+  background: variables.$color-theme;
   color: #ffffff;
 }
 
 ::selection {
-  background: $color-theme;
+  background: variables.$color-theme;
   color: #ffffff;
 }
 
@@ -178,15 +182,15 @@ button,
 select,
 textarea {
   background: transparent;
-  border: 1px solid $color-border;
-  font-family: $ff-body;
-  color: $color-body;
-  @include placeholder-color($color-body);
+  border: 1px solid variables.$color-border;
+  font-family: variables.$ff-body;
+  color: variables.$color-body;
+  @include mixins.placeholder-color(variables.$color-body);
 
   &:focus,
   &:active {
     outline: none;
-    border-color: $color-theme;
+    border-color: variables.$color-theme;
   }
 }
 
@@ -201,10 +205,10 @@ textarea {
 input,
 select,
 button {
-  height: $input-button-height;
+  height: variables.$input-button-height;
   padding: 0 15px;
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     height: 44px;
   }
 }
@@ -214,7 +218,7 @@ textarea {
 }
 
 blockquote {
-  border-left: 5px solid $color-theme;
+  border-left: 5px solid variables.$color-theme;
   font-size: 18px;
   line-height: 27px;
   padding: 40px;
@@ -222,7 +226,7 @@ blockquote {
   position: relative;
   z-index: 1;
   margin-left: 25px;
-  background: lighten($color-bg-body, 5);
+  background: color.adjust(variables.$color-bg-body, $lightness: 5%);
 
   p {
     margin-bottom: 0;
@@ -234,15 +238,15 @@ blockquote {
     font-size: 14px;
 
     a {
-      color: $color-theme;
+      color: variables.$color-theme;
 
       &:hover {
-        color: $color-theme;
+        color: variables.$color-theme;
       }
     }
   }
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     font-size: 16px;
     line-height: 25px;
     padding: 20px;
@@ -279,7 +283,7 @@ blockquote {
     left: 0;
     top: 7px;
     font-size: 16px;
-    color: $color-theme;
+    color: variables.$color-theme;
   }
 }
 
@@ -317,7 +321,7 @@ input[type="radio"] {
       position: absolute;
       left: 0;
       top: 5px;
-      border: 1px solid $color-border;
+      border: 1px solid variables.$color-border;
       height: 15px;
       width: 15px;
       line-height: 1;
@@ -327,13 +331,13 @@ input[type="radio"] {
 
   &:checked {
     & ~ label {
-      color: $color-theme;
+      color: variables.$color-theme;
 
       &:before {
         content: "\f00c";
 
-        color: $color-theme;
-        border-color: $color-theme;
+        color: variables.$color-theme;
+        border-color: variables.$color-theme;
       }
     }
   }
@@ -346,7 +350,7 @@ input[type="radio"] {
       position: absolute;
       left: 0;
       top: 50%;
-      border: 2px solid $color-border;
+      border: 2px solid variables.$color-border;
       border-radius: 100px;
       height: 15px;
       width: 15px;
@@ -360,8 +364,8 @@ input[type="radio"] {
     & ~ label {
       &::before {
         content: "";
-        color: $color-theme;
-        border-color: $color-theme;
+        color: variables.$color-theme;
+        border-color: variables.$color-theme;
       }
     }
   }

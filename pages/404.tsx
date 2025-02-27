@@ -17,8 +17,7 @@ export default function NotFound() {
               <div className="col-lg-8">
                 <div className="notfound">
                   <div className="notfound-inner text-center">
-                    <h1>Are you lost?</h1>
-                    <h3>Go back to root page</h3>
+                    <h1>No such page</h1>
                     <Link href="/" className="mi-button">
                       Get me home
                     </Link>

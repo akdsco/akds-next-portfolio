@@ -38,12 +38,12 @@ export default function Portfolios() {
   return (
     <Layout>
       <Head>
-        <title>akds : portfolio</title>
+        <title>akds : projects</title>
         <meta name="description" content="Arkadiusz portfolio page" />
       </Head>
       <div className="mi-about mi-section mi-padding-top mi-padding-bottom">
         <div className="container">
-          <SectionTitle title="Portfolios" />
+          <SectionTitle title="Projects" />
           {<PortfoliosView portfolios={currentPortfolios} />}
           {portfolio.length > portfoliosPerPage && (
             <Pagination

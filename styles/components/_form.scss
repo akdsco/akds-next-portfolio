@@ -1,3 +1,5 @@
+@use "../variables";
+
 /**
  * Form Styles
  */
@@ -11,8 +13,8 @@
       position: absolute;
       left: 15px;
       top: -13px;
-      background: $color-bg-body;
-      transition: $transition;
+      background: variables.$color-bg-body;
+      transition: variables.$transition;
       pointer-events: none;
       padding: 0 10px;
       font-size: 0.94rem;
@@ -20,7 +22,7 @@
 
     input,
     textarea {
-      border: 1px solid $color-border;
+      border: 1px solid variables.$color-border;
       font-size: 1rem;
     }
   }

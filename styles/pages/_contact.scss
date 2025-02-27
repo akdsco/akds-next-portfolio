@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../variables";
+
 /**
  * Contact
  */
@@ -9,7 +12,7 @@
 
   &-info-block {
     margin-top: 30px;
-    background: rgba(lighten($color-bg-body, 5), 1);
+    background: rgba(color.adjust(variables.$color-bg-body, $lightness: 5%), 1);
     padding: 30px;
     display: flex;
 
@@ -19,7 +22,7 @@
       width: 70px;
       flex: 0 0 70px;
       max-width: 70px;
-      border: 1px solid $color-border;
+      border: 1px solid variables.$color-border;
       text-align: center;
       line-height: 66px;
       margin-right: 20px;
@@ -39,30 +42,30 @@
         margin-bottom: 0;
 
         a {
-          color: $color-body;
-          transition: $transition;
+          color: variables.$color-body;
+          transition: variables.$transition;
 
           &:hover {
-            color: $color-theme;
+            color: variables.$color-theme;
           }
         }
       }
     }
   }
 
-  @media #{$layout-tablet} {
+  @media #{variables.$layout-tablet} {
     &-info {
       margin-top: 50px;
     }
   }
 
-  @media #{$layout-mobile-lg} {
+  @media #{variables.$layout-mobile-lg} {
     &-info {
       margin-top: 50px;
     }
   }
 
-  @media #{$layout-mobile-sm} {
+  @media #{variables.$layout-mobile-sm} {
     &-info-block {
       padding: 20px;
       flex-wrap: wrap;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, type JSX } from "react";
 import Head from "next/head";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -76,7 +76,7 @@ export default function Contact() {
       return loadError("Message is required.");
     }
 
-    // If no errors, send message
+    // If no errors, send a message
     await sendMessage(formData);
   };
 
@@ -134,8 +134,9 @@ export default function Contact() {
                   onSubmit={submitHandler}
                 >
                   <div className="mi-form-field">
-                    <label htmlFor="contact-form-name">Enter your name*</label>
+                    <label htmlFor="contact-form-name">What&#39;s your name?*</label>
                     <input
+                      required
                       onChange={handleChange}
                       type="text"
                       name="name"
@@ -145,9 +146,10 @@ export default function Contact() {
                   </div>
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-email">
-                      Enter your email*
+                      Email*
                     </label>
                     <input
+                      required
                       onChange={handleChange}
                       type="text"
                       name="email"
@@ -157,9 +159,10 @@ export default function Contact() {
                   </div>
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-subject">
-                      Enter your subject*
+                      Subject*
                     </label>
                     <input
+                      required
                       onChange={handleChange}
                       type="text"
                       name="subject"
@@ -169,9 +172,10 @@ export default function Contact() {
                   </div>
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-message">
-                      Enter your Message*
+                      Message*
                     </label>
                     <textarea
+                      required
                       onChange={handleChange}
                       name="message"
                       id="contact-form-message"
@@ -188,12 +192,12 @@ export default function Contact() {
                       disabled={formState === "loading"}
                     >
                       {formState === "ready"
-                        ? "Send mail"
+                        ? "Send"
                         : formState === "loading"
-                        ? "Processing.."
+                        ? "Sending.."
                         : formState === "fail"
                         ? "Try again"
-                        : "Send more"}
+                        : "Reset"}
                     </button>
                     {formState === "loading" && <Loader />}
                   </div>
