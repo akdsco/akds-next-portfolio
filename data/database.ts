@@ -125,7 +125,7 @@ const database = {
       title: "SlateIQ",
       subtitle: "TypeScript ● React ● Node.js ● MongoDB",
       imageUrl: "/img/portfolio-slate-iq.png",
-      data: "/data/data-p1.md",
+      data: "",
       url: "https://slateiq.com",
     },
     {
@@ -133,7 +133,7 @@ const database = {
       title: "Routes Wallet",
       subtitle: "TypeScript ● React Native ● SQL",
       imageUrl: "/img/portfolio-routes-wallet.png",
-      data: "data/data-p2.md",
+      data: "",
       url: "https://routeswallet.app",
     },
   ],
